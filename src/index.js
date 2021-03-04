@@ -4,9 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+import Footer from './components/layout/Footer';
+import Body from './components/layout/Body';
+
+
+import axios from 'axios';
+axios.defaults.baseURL = 'http://localhost/E-commerce/api/';
+
+axios.defaults.headers.common['Authorization'] = 'Bearer '+ localStorage.getItem('token');
+
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
+  <React.StrictMode>    
+    <Body />
+    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );
