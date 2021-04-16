@@ -15,6 +15,7 @@ axios.defaults.baseURL = 'http://localhost/E-commerce/api/';
 axios.defaults.headers.common['Authorization'] = 'Bearer '+ localStorage.getItem('token');
 
 
+
 ReactDOM.render(
   <React.StrictMode>    
     <Body />
